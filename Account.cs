@@ -9,37 +9,39 @@ namespace BankAccount
     class Account
     {
         protected int accountNumber;
-        protected float accountBalance;
-        protected float withdrawAmount;
-        protected float depositAmount;
+        protected double accountBalance;
+        protected double depositAmount;
+        protected double withdrawAmount;
 
         public int AccountNumber
         {
             get { return this.accountNumber; }
+            set { this.accountNumber = value; }
         }
-        public float AccountBalance
+        public double AccountBalance
         {
             get { return this.accountBalance; }
+            set { this.accountBalance = value; }
         }
-        public float WithdrawAmount
-        {
-            get { return this.withdrawAmount; }
-        }
-        public float DepositAmount
+        public double DepositAmount
         {
             get { return this.depositAmount; }
+        }
+        public double WithdrawAmount
+        {
+            get { return this.withdrawAmount; }
         }
 
         public Account()
         {
 
         }
-        public Account(int accountNumber, float accountBalance, float withdrawAmount, float depositAmount)
+        public Account(int accountNumber, double accountBalance, double depositAmount, double withdrawAmount)
         {
             this.accountNumber = accountNumber;
             this.accountBalance = accountBalance;
-            this.withdrawAmount = withdrawAmount;
             this.depositAmount = depositAmount;
+            this.withdrawAmount = withdrawAmount;
 
         }
 
@@ -51,11 +53,11 @@ namespace BankAccount
         {
 
         }
-        public virtual void DisplayWithdrawAmount()
+        public virtual void DisplayDepositAmount()
         {
 
         }
-        public virtual void DisplayDepositAmount()
+        public virtual void DisplayWithdrawAmount()
         {
 
         }
