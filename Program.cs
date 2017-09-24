@@ -17,7 +17,7 @@ namespace BankAccount
 
             Client newClient = new Client("Tyler", "Graves", "July 26 1990", "1426 Imaginary Ave", "135-79-2468");
             CheckingAccount newChecking = new CheckingAccount();
-            SavingsAccount newSaving = new SavingsAccount();
+            SavingsAccount newSaving = new SavingsAccount(150);
 
 
 

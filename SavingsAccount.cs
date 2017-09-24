@@ -15,9 +15,9 @@ namespace BankAccount
             get { return this.minBalance; }
             set { this.minBalance = value; }
         }
-        public SavingsAccount()
+        public SavingsAccount(double minBlance)
         {
-
+            this.minBalance = 150;
         }
         public SavingsAccount(int accountNumber, double accountBalance, double depositAmount, double withdrawAmount, double minBalance)
         {
@@ -44,7 +44,10 @@ namespace BankAccount
         }
         public override void DisplayWithdrawAmount()
         {
-
+            Console.WriteLine("How much would you like to withdraw from your savings?");
+            double withdrawResponse = double.Parse(Console.ReadLine());
+            double currentSavingsBalance = (accountBalance - withdrawResponse);
+            Console.WriteLine("Your current savings account balance is {0}:", currentSavingsBalance);
         }
         
 
