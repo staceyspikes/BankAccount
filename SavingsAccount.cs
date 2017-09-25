@@ -18,6 +18,17 @@ namespace BankAccount
         public SavingsAccount(double minBlance)
         {
             this.minBalance = 150;
+            if(accountBalance - withdrawAmount < minBalance)
+            {
+                Console.WriteLine("Sorry your savings account doesn not have sufficient funds in order to process your withdraw.");
+                
+            }
+            else
+            {
+                accountBalance -= withdrawAmount;
+
+            }
+
         }
         public SavingsAccount(int accountNumber, double accountBalance, double depositAmount, double withdrawAmount, double minBalance)
         {
@@ -49,6 +60,8 @@ namespace BankAccount
             double currentSavingsBalance = (accountBalance - withdrawResponse);
             Console.WriteLine("Your current savings account balance is {0}:", currentSavingsBalance);
         }
+
+       
         
 
 
